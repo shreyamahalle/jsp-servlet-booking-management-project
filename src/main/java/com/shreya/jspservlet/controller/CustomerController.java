@@ -80,7 +80,7 @@ public class CustomerController extends HttpServlet {
         out.println("</body></html>");
     }
 
-    protected void Update(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, SQLException {
+    protected void doUpdate(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, SQLException {
         int id = Integer.parseInt(req.getParameter("id"));
         String name = String.valueOf(Integer.parseInt(req.getParameter("name")));
 
