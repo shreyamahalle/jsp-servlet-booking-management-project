@@ -1,4 +1,5 @@
 package com.shreya.jspservlet.service;
+import com.shreya.jspservlet.model.Customer;
 import com.shreya.jspservlet.model.DeliveryAgent;
 import com.shreya.jspservlet.repository.DeliveryAgentRepository;
 import java.sql.SQLException;
@@ -16,12 +17,22 @@ public class DeliveryAgentService  {
         }
         return true;
     }
+    public boolean updateDeliveryAgent(int id, String name) throws SQLException {
+        return deliveryAgentRepository.updateDeliveryAgent(id, name);
+    }
+
+    public boolean deleteDeliveryAgent(int id) throws SQLException {
+        return deliveryAgentRepository.deleteDeliveryAgent(id);
+    }
+
+    public Customer retrieveDeliveryAgent(int id, String name) throws SQLException {
+        return deliveryAgentRepository.retrieveDeliveryAgent(id, name);
+    }
+
 
     public List<DeliveryAgent> retrieveDeliveryAgents() throws SQLException {
         return deliveryAgentRepository.retrieveDeliveryAgents();
     }
-
-
 }
 
 
