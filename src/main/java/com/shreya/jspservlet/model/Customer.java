@@ -8,7 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Data
-@Builder
 public class Customer {
     private int id;
     private String name;

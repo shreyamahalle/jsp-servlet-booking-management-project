@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Booking Management System</h1>
-<form action="/servlet-booking-management-project/CustomerController" method="POST">
+<form action="/jspservlet-booking-management-project/CustomerController" method="POST">
     <label> id: </label>
 	<input type = "textbox" id ="id" name="id"/>
 	<br/>

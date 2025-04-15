@@ -1,6 +1,5 @@
 package com.shreya.jspservlet.repository;
 
-import com.shreya.jspservlet.model.Customer;
 import com.shreya.jspservlet.model.DeliveryAgent;
 import com.shreya.jspservlet.service.ConnectionService;
 
@@ -105,7 +104,7 @@ public class DeliveryAgentRepository {
         return deliveryAgents;
     }
 
-    public Customer retrieveDeliveryAgent(int id, String name) {
+    public void retrieveDeliveryAgent(int id, String name) {
         DeliveryAgent deliveryAgent = null;
         String sql = "SELECT * FROM deliveryagent WHERE id = ? AND name = ?";
 
@@ -134,7 +133,6 @@ public class DeliveryAgentRepository {
                 }
             }
         }
-        return null;
     }
 
 
@@ -150,7 +148,6 @@ public class DeliveryAgentRepository {
         deliveryAgents.remove(deliveryAgent);
     }
 
-
     public void displayDeliveryAgentToBeClosed(int id) {
 
         DeliveryAgent deliveryAgentToBeClosed = null;
@@ -160,20 +157,5 @@ public class DeliveryAgentRepository {
             }
         }
         deliveryAgents.remove(deliveryAgentToBeClosed);
-    }
-    public boolean updateDeliveryAgent(int id, String name) {
-        String query = "UPDATE deliveryAgent SET name = ? WHERE id = ?";
-
-        try (Connection connection = new ConnectionService().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-            preparedStatement.setString(1, name);
-            preparedStatement.setInt(2, id);
-
-            return preparedStatement.executeUpdate() > 0;
-
-        } catch (SQLException e) {
-            throw new RuntimeException("Error updating DeliveryAgent: " + e.getMessage(), e);
-        }
     }
 }

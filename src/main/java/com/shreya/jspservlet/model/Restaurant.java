@@ -8,7 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Data
-@Builder
 public class Restaurant {
     private int registerNo;
     private String name;

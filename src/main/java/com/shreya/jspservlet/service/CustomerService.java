@@ -29,6 +29,6 @@ public class CustomerService {
 
     public List<Customer> retrieveCustomers() throws SQLException {
         return customerRepository.retrieveCustomers();
+
     }
 }
-
