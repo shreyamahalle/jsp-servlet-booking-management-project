@@ -12,6 +12,7 @@ import java.util.Set;
 
 public class RestaurantRepository {
     private static Connection connection = null;
+    Set<Restaurant> restaurants = new HashSet<>();
 
     private void initConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
@@ -105,7 +106,6 @@ public class RestaurantRepository {
         }
     }
 
-
     public boolean deleteRestaurant(int registerNo) throws SQLException {
 
         try {
@@ -149,9 +149,6 @@ public class RestaurantRepository {
             }
         }
     }
-
-
-    Set<Restaurant> restaurants = new HashSet<>();
 
     public void createRestaurant(Restaurant restaurant) {
 

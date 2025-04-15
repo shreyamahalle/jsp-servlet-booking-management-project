@@ -10,13 +10,13 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class CustomerImpl implements OrderNumberService {
-    @Override
-    public void createOrderNo() {
-    }
-
     OrderRepository orderRepository = new OrderRepository();
     HashMap<Integer, Order> orders = new HashMap<>();
     Scanner sc = new Scanner(System.in);
+
+    @Override
+    public void createOrderNo() {
+    }
 
     public void printCustomer() {
         //System.out.println(order);

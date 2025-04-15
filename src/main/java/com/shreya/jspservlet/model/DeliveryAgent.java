@@ -12,8 +12,8 @@ import java.util.Objects;
 @Data
 
 public class DeliveryAgent {
+    public int mobileNo;
     private int id;
     private String name;
     private String city;
-    public int mobileNo;
 }

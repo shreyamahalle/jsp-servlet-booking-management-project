@@ -11,6 +11,7 @@ import java.util.Set;
 
 public class OrderRepository {
     private static Connection connection = null;
+    Set<Order> orders = new HashSet<>();
 
     private void initConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
@@ -76,7 +77,6 @@ public class OrderRepository {
         return orders;
     }
 
-
     public void retrieveOrder(int id, String type) {
         Order order = null;
         String sql = "SELECT * FROM orderr WHERE id = ? AND type = ?";
@@ -128,7 +128,6 @@ public class OrderRepository {
         }
     }
 
-
     public boolean updateOrder(int id, String type) throws SQLException {
         Order order = null;
         try {
@@ -150,9 +149,6 @@ public class OrderRepository {
             }
         }
     }
-
-
-    Set<Order> orders = new HashSet<>();
 
     public void createOrder(Order order) {
 

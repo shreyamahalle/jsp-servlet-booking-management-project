@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Customer</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
 
 </head>
 <body>
 <h1>Update Customer</h1>
 <form action="/jspservlet-booking-management-project/CustomerController" method="POST">
     <label> ID: </label>
-    <input type="text" name="id" value=""/>
+    <input name="id" type="text" value=""/>
     <br/>
 
     <label> Name: </label>
-    <input type="text" name="name" value=""/>
+    <input name="name" type="text" value=""/>
     <br/>
 
     <label> City: </label>
-    <input type="text" name="city" value=""/>
+    <input name="city" type="text" value=""/>
     <br/>
 
     <label> Age: </label>
-    <input type="text" name="age" value=""/>
+    <input name="age" type="text" value=""/>
     <br/>
 
     <label> Mobile No: </label>
-    <input type="text" name="mobileNo" value=""/>
+    <input name="mobileNo" type="text" value=""/>
     <br/>
 
     <input type="submit" value="Update Customer"/>
     <input type="reset" value="Reset"/>
     <br/>
     <div>
-        <button type="button" onclick="location.href='index.html'">Back to Home</button>
+        <button onclick="location.href='index.html'" type="button">Back to Home</button>
     </div>
 </form>
 </body>

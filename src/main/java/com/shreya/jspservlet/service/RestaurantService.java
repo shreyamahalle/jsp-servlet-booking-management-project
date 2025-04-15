@@ -48,11 +48,6 @@ public class RestaurantService {
 
     }
 
-
-    public void printCustomer() {
-        System.out.println(restaurants);
-    }
-
     public static void createRestaurant() {
 
         Restaurant restaurant = new Restaurant();
@@ -95,6 +90,10 @@ public class RestaurantService {
         } catch (Exception e) {
             System.out.println("Invalid input type correct data");
         }
+    }
+
+    public void printCustomer() {
+        System.out.println(restaurants);
     }
 
     public List<Restaurant> retrieveDeliveryAgents() {

@@ -1,4 +1,5 @@
 package com.shreya.jspservlet.controller;
+
 import com.shreya.jspservlet.model.Customer;
 import com.shreya.jspservlet.service.CustomerService;
 import jakarta.servlet.ServletException;
@@ -20,7 +21,8 @@ public class CustomerController extends HttpServlet {
         try {
             // Retrieve the customer list
             List<Customer> customerList = customerService.retrieveCustomers();
-            req.setAttribute("customerList", customerList);  // Set the list to the request scope
+            req.setAttribute("customerList", customerList);// Set the list to the request scope
+
             req.getRequestDispatcher("/DisplayCustomer.jsp").forward(req, res);  // Forward the request to JSP
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +81,7 @@ public class CustomerController extends HttpServlet {
         out.println("</body></html>");
     }
 
-    protected void Update(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, SQLException {
+    protected void doUpdate(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException, SQLException {
         int id = Integer.parseInt(req.getParameter("id"));
         String name = String.valueOf(Integer.parseInt(req.getParameter("name")));
 

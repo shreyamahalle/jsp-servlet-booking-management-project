@@ -11,6 +11,7 @@ import java.util.Set;
 
 public class DeliveryAgentRepository {
     private static Connection connection = null;
+    Set<DeliveryAgent> deliveryAgents = new HashSet<>();
 
     private void initConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
@@ -134,9 +135,6 @@ public class DeliveryAgentRepository {
             }
         }
     }
-
-
-    Set<DeliveryAgent> deliveryAgents = new HashSet<>();
 
     public void createDeliveryAgent(DeliveryAgent deliveryAgent) {
 

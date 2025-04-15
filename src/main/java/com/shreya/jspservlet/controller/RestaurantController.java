@@ -1,4 +1,5 @@
 package com.shreya.jspservlet.controller;
+
 import com.shreya.jspservlet.model.Restaurant;
 import com.shreya.jspservlet.service.RestaurantService;
 import jakarta.servlet.ServletException;
